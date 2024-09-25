@@ -3,6 +3,11 @@ const select = document.getElementById('select');
 const total = document.getElementById('Total');
 count.innerText = 0;
 let totalprice = 0;
+
+function menubar(){
+    document.getElementById('menu').classList.remove('hidden');
+}
+
 function buttonclick(event){
      totalprice += 550;
     total.innerText = totalprice.toFixed(2);

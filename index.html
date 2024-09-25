@@ -13,26 +13,68 @@
 <body>
     <header class=" w-11/12 mx-auto my-2">
         <nav class="flex justify-between">
-          <div class="flex items-center gap-2">
-            <div class="w-12">
-                <img class="w-full" src="assets/favicon.png" alt="icon">
+          <div class="flex items-center">
+            <img class="h-8" src="assets/logo-transparent.png" alt="logo">
             </div>
-            <h3 class="font-bold text-3xl">Dublin Bus</h3>
-            </div>
-            <ul class="hidden md:flex items-center gap-2 text-2xl">
-                 <li>Home</li>
-                 <li>About Us</li>
-                 <li>Destination</li>
-                 <li>Search</li>
-                 <li>Contact Us</li>   
+            <ul class="hidden md:flex items-center gap-5 text-2xl font-semibold">
+                 <li class="hover:text-green-400 cursor-pointer text-green-400">Home</li>
+                 <li class="hover:text-green-400 cursor-pointer">About Us</li>
+                 <li class="hover:text-green-400 cursor-pointer">Destination</li>
+                 <li class="hover:text-green-400 cursor-pointer">Search</li>
+                 <li class="hover:text-green-400 cursor-pointer">Contact Us</li>   
             </ul>
-            <div class="flex items-center gap-5">
-                <button class="btn btn-success text-2xl">Bus</button>
-            </div>
+           
+                <div class="flex items-center gap-5">
+                    <button class="btn btn-success text-2xl hover:bg-gray-200 hover:text-green-400 hover:border-green-400">Bus</button>
+                </div>
+                <ul id="menu" class="hidden absolute top-16 right-8 bg-slate-200 z-10   gap-5 text-2xl font-semibold">
+                    <li class="hover:text-green-400 cursor-pointer text-green-400">Home</li>
+                    <li class="hover:text-green-400 cursor-pointer">About Us</li>
+                    <li class="hover:text-green-400 cursor-pointer">Destination</li>
+                    <li class="hover:text-green-400 cursor-pointer">Search</li>
+                    <li class="hover:text-green-400 cursor-pointer">Contact Us</li>   
+               </ul>
+                <div onclick="menubar()" class="md:hidden cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </div>
+
         </nav>
+        <section class="bg-[url(./assets/slide01.jpg)] relative  overflow-hidden bg-no-repeat rounded-2xl h-[75vh] bg-cover bg-center mt-5 mb-24 shadow-sm">
+            <div class="absolute -z-10 top-0 right-0 w-full h-full bg-black/45"></div>
+             <h3 class="my-10 text-center md:text-6xl text-white font-black">End-to-End Travel with <br>
+                <span class=" text-success">Dublin bus</span>
+             </h3>
+             <p class="text-center py-6 my-6 text-startfont-semibold text-2xl">
+                Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .
+             </p>
+             <div class="flex items-center justify-center gap-5">
+                <button class="btn btn-success text-2xl hover:bg-gray-200 hover:text-green-400 hover:border-green-400">Buy Ticket</button>
+            </div>
+        </section>
+        
+
     </header>
 
     <main>
+        <section>
+            <div class="md:flex justify-center -mt-40 gap-8">
+                <div class="card w-80 h-40 flex flex-col justify-center items-center bg-gray-400 shadow-lg rounded-2xl border-b-2 border-green-500">
+                    <h2 class="text-4xl font-bold">400k+</h2>
+                    <p class=" text-2xl">Registerd User</p>
+    
+                </div>
+                <div class="card w-80 h-40 flex flex-col justify-center items-center bg-gray-400 shadow-lg rounded-2xl border-b-2 border-green-500">
+                    <h2 class="text-4xl font-bold">1.7 lacks</h2>
+                    <p class=" text-2xl">Tickets Sold</p>
+    
+                </div>
+                <div class="card w-80 h-40 flex flex-col justify-center items-center bg-gray-400 shadow-lg rounded-2xl border-b-2 border-green-500">
+                    <h2 class="text-4xl font-bold">80K+</h2>
+                    <p class=" text-2xl">Rental partners</p>
+    
+                </div>
+            </div>
+        </section>
         <section class="bg-slate-300 p-5 w-11/12 mx-auto mt-4 rounded-xl">
             <div class="grid grid-cols-3 gap-5">
                 <div class="col-span-2">
