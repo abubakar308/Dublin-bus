@@ -302,25 +302,38 @@
                             <div class="border-2 my-6 border-dashed border-black">
                             </div>
                         </div>
-                        <div class="flex justify-between text-2xl">
-                            <input class="p-5 rounded-2xl" type="text" placeholder="have any coupon" disabled>
-                            <button class="rounded-2xl p-5 bg-gray-400">Apply</button>    
+                        <div id="discount" class="flex justify-between text-2xl">
+                            <input id="coupon-field" class="p-5 rounded-2xl" type="text" placeholder="have any coupon" disabled>
+                            <button id="coupon-button" class="rounded-2xl p-5 bg-gray-400">Apply</button>    
                         </div>
                         <div class="border-2 my-6 border-dashed border-black">
                         </div>
                         <div  class="flex text-3xl justify-between p-4 items-center">
                             <p class="">Grand Price</p>
-                            <p class=" flex">BDT: <span id="Total">***</span></p>
+                            <p class=" flex">BDT: <span id="grand">***</span></p>
                         </div>
                        </div>
                        <div class="text-2xl font-bold my-5">
                         <label for="name">Passenger Name</label><br>
                         <input class="p-5 my-4 w-full rounded-2xl border-solid border-2 border-gray-400" type="text" placeholder="Enter Your Name"><br>
                         <label for="name">Phone Number</label><br>
-                        <input class="p-5 my-4 w-full rounded-2xl border-solid border-2 border-gray-400" type="text" placeholder="Enter Your Phone Number"><br>
+                        <input id="number" class="p-5 my-4 w-full rounded-2xl border-solid border-2 border-gray-400" type="number" placeholder="Enter Your Phone Number"><br>
                         <label for="name">Email ID</label><br>
-                        <input class="p-5 my-4 w-full rounded-2xl border-solid border-2 border-gray-400" type="text" placeholder="Enter Your Email ID">
-                        <button onclick="submit()" disabled class="bg-gray-400 w-full rounded-2xl py-4">Next</button>
+                        <input class="p-5 my-4 w-full rounded-2xl border-solid border-2 border-gray-400" type="email" placeholder="Enter Your Email ID">
+                        <button id="submit" onclick="modal.showModal()" disabled class="bg-gray-400 w-full rounded-2xl py-4">Next</button>
+                        <dialog id="modal" class="modal text-center">
+                            <div class="modal-box">
+                              <h3 class="text-2xl font-bold text-center text-green-400">Congratulations</h3>
+                              <p class="py-4">Thank you for booking our bus seats. We are working hard to find the best Service and deals for you.</p>
+                                <head>Shortly you will find a confirmation in your email</head>
+                              <div class="modal-action">
+                                <form method="dialog">
+                                  <!-- Close button -->
+                                    <button class="btn mx-40 bg-green-600 text-black">Continue</button>
+                                </form>
+                              </div>
+                            </div>
+                          </dialog>
                        </div>
                        <div class="text-2xl flex justify-center gap-24 ">
                         <a href="#">Terms And condition</a>
