@@ -7,6 +7,8 @@ const couponField = document.getElementById('coupon-field');
 const couponButton = document.getElementById('coupon-button');
 const discount = document.getElementById('discount');
 const number = document.getElementById('number');
+const pname = document.getElementById('name');
+const email = document.getElementById('email');
 const submit = document.getElementById('submit');
 const modal = document.getElementById('modal');
 count.innerText = 0;
@@ -68,9 +70,12 @@ function buttonclick(event){
  let couponSave = 0;
 document.getElementById('coupon-button').addEventListener('click',function(){
    const input = couponField.value;
+   number.removeAttribute('disabled');
+   pname.removeAttribute('disabled');
+   email.removeAttribute('disabled');
   
    if(input !== 'NEW15' && input !== 'NEW20'){
-       alert('Invalid coupon');
+      return alert('Invalid coupon');
    }
    if(input === 'NEW15'){
     couponSave = totalprice * 0.15;
@@ -80,7 +85,7 @@ document.getElementById('coupon-button').addEventListener('click',function(){
       couponSave = totalprice * 0.2;
    }
    discount.innerHTML =`
-                      <div class="flex text-3xl justify-between p-4 gap-28 items-center">
+                      <div class="flex text-2xl justify-between p-4 items-center">
                      <p class="">Discount</p>
                       <p class=" flex">-BDT: ${couponSave.toFixed(2)} </p>
                        </div>
@@ -88,7 +93,7 @@ document.getElementById('coupon-button').addEventListener('click',function(){
    let grand = totalprice - couponSave;
    grandPrice.innerText = grand.toFixed(2);
 })
-  number.addEventListener('input',function(event){
+  number,pname,email.addEventListener('input',function(event){
    const input = event.target.value
    if(input.length >= '11'){
       submit.removeAttribute("disabled");
